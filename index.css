@@ -1,0 +1,1057 @@
+/* =========================================
+   RESET / GENERELT
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #e4d0c5;
+  color: #111;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================
+   FARVER
+========================================= */
+
+:root {
+  --beige: #ebdad1;
+  --cream: #f6efe7;
+  --brown: #e0a36a;
+}
+
+/* =========================================
+   HEADER
+   MOBIL FIRST
+========================================= */
+
+.top {
+  width: 100%;
+  min-height: 200px;
+
+  background-color: var(--beige);
+
+  padding: 50px 20px 35px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.name-area {
+  width: 100%;
+}
+
+.name-area h1 {
+  margin: 0;
+
+  font-family: "Italiana", serif;
+  font-size: 38px;
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  color: var(--brown);
+}
+
+.name-area p {
+  margin: 10px 0 0;
+
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.practice-title {
+  margin-top: 55px;
+
+  width: 100%;
+}
+
+.practice-title p {
+  margin: 0;
+
+  font-size: 21px;
+}
+
+.orange-line {
+  width: 250px;
+
+  margin: 8px auto 0;
+}
+
+/* =========================================
+   NAVIGATION
+   MOBIL FIRST
+========================================= */
+
+.main-nav {
+  width: 100%;
+
+  background-color: var(--cream);
+
+  position: relative;
+
+  z-index: 50;
+}
+
+.nav-inner {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 28px;
+
+  padding: 20px;
+
+  overflow-x: auto;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;
+}
+
+.nav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-inner a {
+  flex-shrink: 0;
+
+  font-family: "Italiana", serif;
+
+  font-size: 10px;
+
+  margin: 0 auto;
+
+  white-space: nowrap;
+}
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+  width: 100%;
+}
+
+/* =========================================
+   WELCOME
+   MOBIL FIRST
+========================================= */
+
+.welcome {
+  position: relative;
+
+  width: 100%;
+
+  background-color: var(--beige);
+
+  padding: 50px 20px 0;
+}
+
+.welcome-text {
+  position: relative;
+
+  width: 100%;
+
+  z-index: 10;
+}
+
+.welcome-text h2 {
+  margin: 0;
+
+  font-family: "Italiana", serif;
+
+  font-size: 37px;
+  font-weight: 400;
+
+  line-height: 1.1;
+}
+
+.welcome-line {
+  width: 145px;
+
+  margin-top: 15px;
+  margin-left: 35px;
+}
+
+/* =========================================
+   GROUP 6
+   MOBIL FIRST
+
+   PÅ MOBIL ER BILLEDET I NORMAL FLOW
+========================================= */
+
+.group-images {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 35px auto 0;
+
+  z-index: 5;
+}
+
+/* =========================================
+   OM MIG
+   MOBIL FIRST
+========================================= */
+
+.about {
+  position: relative;
+
+  width: 100%;
+
+  background-color: var(--cream);
+
+  padding: 45px 20px 60px;
+}
+
+.about-copy {
+  width: 100%;
+
+  max-width: 500px;
+}
+
+.about-copy h2 {
+  margin: 0 0 25px;
+
+  font-family: "Italiana", serif;
+
+  font-size: 42px;
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.about-copy p {
+  margin: 0 0 15px;
+
+  font-size: 15px;
+
+  line-height: 1.55;
+}
+
+/* =========================================
+   UDVALGTE PROJEKTER
+   MOBIL FIRST
+========================================= */
+
+.project-link {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-top: 50px;
+
+  font-family: "Italiana", serif;
+
+  font-size: 28px;
+
+  color: var(--brown);
+
+  text-align: center;
+}
+
+.project-arrow {
+  margin-top: 5px;
+
+  font-family: "Roboto", sans-serif;
+
+  font-size: 45px;
+
+  line-height: 1;
+}
+
+/* =========================================
+   DESKTOP
+   800PX OG OP
+========================================= */
+
+@media (min-width: 800px) {
+  /* =====================================
+       HEADER
+    ===================================== */
+
+  .top {
+    min-height: 475px;
+
+    padding: 75px 40px 35px;
+
+    justify-content: flex-start;
+  }
+
+  .name-area h1 {
+    font-size: clamp(55px, 6vw, 80px);
+
+    white-space: nowrap;
+  }
+
+  .name-area p {
+    margin-top: 15px;
+
+    font-size: clamp(25px, 2.5vw, 30px);
+  }
+
+  .practice-title {
+    margin-top: auto;
+  }
+
+  .practice-title p {
+    font-size: clamp(26px, 2.5vw, 40px);
+  }
+
+  .orange-line {
+    width: 430px;
+
+    margin-top: 10px;
+  }
+
+  /* =====================================
+       NAVIGATION
+    ===================================== */
+
+  .nav-inner {
+    min-height: 75px;
+
+    justify-content: center;
+
+    padding: 0 5%;
+
+    overflow: visible;
+  }
+
+  .nav-inner a {
+    font-size: clamp(18px, 1.8vw, 28px);
+    position: relative;
+  }
+
+  .nav-inner a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #111;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.4s ease;
+  }
+
+  .nav-inner a:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* =====================================
+       WELCOME
+
+       GROUP6 BLIVER LIGGENDE I DENNE
+       SEKTION OG KAN GÅ NED OVER DEN
+    ===================================== */
+
+  .welcome {
+    position: relative;
+
+    height: 440px;
+
+    padding: 120px 6% 0;
+
+    overflow: visible;
+  }
+
+  .welcome-text {
+    width: 50%;
+
+    position: relative;
+
+    z-index: 5;
+  }
+
+  .welcome-text h2 {
+    font-size: clamp(45px, 4vw, 65px);
+  }
+
+  .welcome-line {
+    width: 190px;
+
+    margin-top: 15px;
+    margin-left: 90px;
+  }
+
+  /* =====================================
+       GROUP 6
+
+       VIGTIG:
+       TOP = 0
+       IKKE NEGATIV
+
+       BILLEDET STARTER VED WELCOME
+       ===================================== */
+
+  .group-images {
+    position: absolute;
+
+    width: 760px;
+    height: auto;
+
+    top: 0;
+    right: 5%;
+
+    margin: 0;
+
+    z-index: 10;
+  }
+
+  /* =====================================
+       OM MIG
+    ===================================== */
+
+  .about {
+    position: relative;
+
+    min-height: 520px;
+
+    padding: 65px 6% 70px;
+  }
+
+  .about-copy {
+    width: 34%;
+
+    max-width: none;
+  }
+
+  .about-copy h2 {
+    margin-bottom: 30px;
+
+    font-size: clamp(50px, 4vw, 65px);
+  }
+
+  .about-copy p {
+    font-size: 18px;
+
+    line-height: 1.5;
+  }
+
+  /* =====================================
+       UDVALGTE PROJEKTER
+    ===================================== */
+
+  .project-link {
+    position: absolute;
+
+    top: 230px;
+    right: 8%;
+
+    margin: 0;
+
+    font-size: clamp(38px, 3vw, 52px);
+  }
+
+  .project-arrow {
+    font-size: 60px;
+  }
+}
+
+/* =========================================
+   UDVALGTE PROJEKTER
+   MOBILE FIRST
+========================================== */
+
+.projects {
+  width: 100%;
+  background-color: #f3e2d6;
+  padding: 60px 20px 80px;
+  overflow: hidden;
+}
+
+/* =========================================
+   INTRO
+========================================== */
+
+.projects-intro {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.projects-intro h2 {
+  margin: 0 0 35px;
+  font-family: "Italiana", serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #b68b74;
+}
+
+/* VIDEO */
+
+.projects-video {
+  display: block;
+
+  width: 85%;
+  max-width: 400px;
+
+  height: auto;
+
+  margin: 0 auto;
+
+  border-radius: 12px;
+
+  object-fit: cover;
+}
+
+/* =========================================
+   PROJEKT
+========================================== */
+
+.project {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+/* =========================================
+   PROJEKT TITEL
+========================================== */
+
+.project-title {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  margin-bottom: 25px;
+}
+
+.project-number {
+  font-family: "Italiana", serif;
+
+  font-size: 58px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: #c99f89;
+
+  margin-right: 8px;
+}
+
+.project-title h3 {
+  margin: 0;
+
+  font-family: "Roboto", sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 300;
+
+  line-height: 1.3;
+
+  color: #111;
+}
+
+/* =========================================
+   PROJEKTBILLEDER
+========================================== */
+
+.project-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0 auto;
+
+  object-fit: contain;
+}
+
+/* =========================================
+   LIDT LUFT MELLEM PROJEKTERNE
+========================================== */
+
+.project-one {
+  margin-bottom: 90px;
+}
+
+.project-two {
+  margin-bottom: 90px;
+}
+
+.project-three {
+  margin-bottom: 20px;
+}
+
+/* =========================================
+   DESKTOP / TABLET
+   800PX +
+========================================== */
+
+@media (min-width: 800px) {
+  .projects {
+    padding: 80px 5% 120px;
+  }
+
+  /* =====================================
+       INTRO
+    ====================================== */
+
+  .projects-intro {
+    position: relative;
+
+    min-height: 100px;
+
+    margin-bottom: 60px;
+  }
+
+  .projects-intro h2 {
+    font-size: 58px;
+
+    margin-bottom: 45px;
+  }
+
+  .projects-video {
+    width: 420px;
+
+    max-width: 40%;
+
+    margin: 0 auto;
+  }
+
+  /* =========================================
+   PROJEKT 01
+   MOBILE FIRST
+========================================= */
+
+  .project-one {
+    margin-bottom: 90px;
+  }
+
+  /* TITEL */
+
+  .project-one .project-title {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 25px;
+  }
+
+  /* BILLEDE + VIDEO */
+
+  .project-one-image {
+    position: relative;
+
+    width: 100%;
+
+    margin: 0 auto;
+  }
+
+  /* GROUP1 */
+
+  .project-one-image .project-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    margin: 0;
+
+    object-fit: contain;
+  }
+
+  /* VIDEOEN I DEN LYSE RØDE PLADS */
+
+  .charlotte-video {
+    position: absolute;
+
+    width: 43%;
+
+    height: auto;
+
+    left: 29%;
+    top: 43%;
+
+    object-fit: cover;
+
+    border-radius: 2px;
+  }
+
+  /* =========================================
+   DESKTOP
+========================================= */
+
+  @media (min-width: 800px) {
+    .project-one {
+      margin-bottom: 120px;
+    }
+
+    .project-one-image {
+      width: 90%;
+      max-width: 1200px;
+
+      margin: 0 auto;
+    }
+
+    .project-one-image .project-image {
+      width: 100%;
+      animation: hero-float 3s ease-in-out infinite;
+    }
+    @keyframes hero-float {
+      0%,
+      100% {
+        transform: translateY(0) rotate(-0.5deg) scale(1);
+      }
+
+      50% {
+        transform: translateY(-15px) rotate(0.8deg) scale(1.025);
+      }
+    }
+
+    /*
+       VIDEOEN PLACERES I
+       DET STORE LYSE RØDE OMRÅDE
+    */
+
+    .charlotte-video {
+      width: 20%;
+
+      left: 35%;
+
+      top: 45%;
+    }
+  }
+
+  /* =====================================
+       PROJEKT 02
+    ====================================== */
+
+  .project-two {
+    margin-bottom: 100px;
+  }
+
+  .project-two .project-title {
+    justify-content: flex-end;
+
+    padding-right: 8%;
+  }
+
+  .project-two .project-image {
+    width: 90%;
+    max-width: 1150px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    animation: hero-float 3s ease-in-out infinite;
+  }
+
+  @keyframes hero-float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(-0.5deg) scale(1);
+    }
+
+    50% {
+      transform: translateY(-15px) rotate(0.8deg) scale(1.025);
+    }
+  }
+
+  /* =====================================
+       PROJEKT 03
+    ====================================== */
+
+  .project-three {
+    margin-bottom: 0;
+  }
+
+  .project-three .project-title {
+    margin-bottom: 25px;
+  }
+
+  .project-three .project-image {
+    width: 100%;
+    max-width: 1250px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    transition:
+      transform 0.6s ease,
+      filter 0.6s ease;
+  }
+
+  .project:hover .project-image {
+    transform: scale(1.1);
+  }
+
+  /* =====================================
+       TITLER
+    ====================================== */
+
+  .project-number {
+    font-size: 70px;
+  }
+
+  .project-title h3 {
+    font-size: 21px;
+  }
+}
+
+/* =========================================
+   DIGITALE VÆRKTØJER
+   MOBILE FIRST
+========================================= */
+
+.tools {
+  background-color: #e4d0c5;
+  width: 100%;
+}
+
+/* -----------------------------------------
+   TEKST
+----------------------------------------- */
+
+.tools-text {
+  padding: 60px 30px 50px;
+}
+
+.tools-text h2 {
+  font-family: "Italiana", serif;
+  font-size: 42px;
+  font-weight: 400;
+  margin: 0 0 30px;
+}
+
+.tools-text p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 18px;
+  max-width: 65ch;
+}
+
+/* -----------------------------------------
+   VÆRKTØJS IKONER
+----------------------------------------- */
+
+.tools-icons {
+  background-color: #fffaf5;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 25px 15px;
+  gap: 15px;
+}
+
+.tools-icons img {
+  width: 55px;
+  height: 55px;
+
+  object-fit: contain;
+
+  display: block;
+
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.tools-icons img:hover {
+  transform: translateY(-8px) rotate(-2deg);
+  opacity: 0.8;
+}
+
+/* -----------------------------------------
+   PRAKTIK INFORMATION
+----------------------------------------- */
+
+.practice {
+  padding: 5px 30px 80px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.practice-title h2 {
+  font-family: "Italiana", serif;
+  font-size: 40px;
+  font-weight: 400;
+
+  margin: 0;
+}
+
+.practice-list ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.practice-list li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  margin-bottom: 12px;
+}
+
+/* =========================================
+   DESKTOP
+   FRA 800PX
+========================================= */
+
+@media (min-width: 800px) {
+  /* TEKST */
+
+  .tools-text {
+    padding: 90px 60px 70px;
+  }
+
+  .tools-text h2 {
+    font-size: 58px;
+    margin-bottom: 30px;
+  }
+
+  .tools-text p {
+    font-size: 16px;
+    max-width: 70ch;
+  }
+
+  /* VÆRKTØJS IKONER */
+
+  .tools-icons {
+    padding: 12px 12%;
+    min-height: 92px;
+  }
+
+  .tools-icons img {
+    width: 78px;
+    height: 78px;
+  }
+
+  /* PRAKTIK INFORMATION */
+
+  .practice {
+    padding: 90px 8% 110px;
+
+    width: 50%;
+    margin-left: auto;
+
+    display: block;
+  }
+
+  .practice-title h2 {
+    font-size: 52px;
+    font-weight: 400;
+    text-align: left;
+    margin: 0 0 40px;
+  }
+
+  .practice-list {
+    padding: 0;
+  }
+
+  .practice-list ul {
+    margin: 0;
+    padding-left: 25px;
+  }
+
+  .practice-list li {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+}
+
+/* =========================================
+   FOOTER
+   MOBILE FIRST
+========================================= */
+
+.footer {
+  background-color: #f3e5dc;
+  border-top: 2px solid #fffaf5;
+
+  padding: 25px 16px 35px;
+}
+
+.footer h2 {
+  font-family: "Italiana", serif;
+  font-size: 34px;
+  font-weight: 400;
+
+  color: #e0a36a;
+
+  margin: 0 0 30px;
+}
+
+.footer-contact {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.footer-contact p {
+  margin: 0;
+}
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 800px) {
+  .footer {
+    padding: 25px 16px 35px;
+  }
+
+  .footer h2 {
+    font-size: 38px;
+    margin-bottom: 30px;
+  }
+
+  .footer-contact {
+    font-size: 20px;
+  }
+}
